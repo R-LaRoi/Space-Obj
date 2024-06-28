@@ -72,12 +72,14 @@ console.log(Uranus.moons);
 
 // 8. Iterate through the solarSystem array and print only the objects that have a ringSystem (where ringSystem: true), and ignore the others.
 
-// let SolarRing = solarSystem.find((planet) =>
-//   planet.ringSystem.forEach((element) => {
-//     element === true;
-//     console.log(element);
-//   })
-// );
+let planetRingSystem = [];
 
-// console.log(SolarRing);
+let solarRings = solarSystem.forEach((ring) => {
+  if (ring.ringSystem === true) {
+    planetRingSystem.push(ring);
+  }
+});
+
+console.log(planetRingSystem);
+
 // You want to make a loop that goes over each item in the array, and include an if statement.
